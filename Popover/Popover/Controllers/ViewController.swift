@@ -65,13 +65,21 @@ class ViewController: UIViewController {
         guard let presentationVC = popOverViewController.popoverPresentationController else { return }
         presentationVC.delegate = self
         presentationVC.sourceView = tapButton
-        presentationVC.permittedArrowDirections = .right
+        presentationVC.permittedArrowDirections = .down
         presentationVC.sourceRect = CGRect(x: tapButton.bounds.midX,
                                            y: tapButton.bounds.minY - 5,
                                            width: 0,
                                            height: 0)
         
-        present(popOverViewController, animated: true)
+        presentationVC.passthroughViews = [tapButton]
+        if tapButton.titleLabel?.text == "?" {
+            tapButton.setTitle("X", for: .normal)
+            present(popOverViewController, animated: true)
+        } else {
+            tapButton.setTitle("?", for: .normal)
+            presentedViewController?.dismiss(animated: true)
+        }
+        
     }
 
 }
@@ -79,6 +87,10 @@ class ViewController: UIViewController {
 extension ViewController: UIPopoverPresentationControllerDelegate {
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         .none
+    }
+    
+    func presentationControllerShouldDismiss(_ presentationController: UIPresentationController) -> Bool {
+        false
     }
 }
 
