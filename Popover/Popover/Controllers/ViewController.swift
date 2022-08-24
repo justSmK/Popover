@@ -58,9 +58,28 @@ class ViewController: UIViewController {
     }
     
     @objc private func didTapButton() {
-        print("Tap")
+        let popOverViewController = PopOverViewController()
+        popOverViewController.modalPresentationStyle = .popover
+        popOverViewController.preferredContentSize = CGSize(width: 130, height: 150)
+        
+        guard let presentationVC = popOverViewController.popoverPresentationController else { return }
+        presentationVC.delegate = self
+        presentationVC.sourceView = tapButton
+        presentationVC.permittedArrowDirections = .right
+        presentationVC.sourceRect = CGRect(x: tapButton.bounds.midX,
+                                           y: tapButton.bounds.minY - 5,
+                                           width: 0,
+                                           height: 0)
+        
+        present(popOverViewController, animated: true)
     }
 
+}
+
+extension ViewController: UIPopoverPresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        .none
+    }
 }
 
 // MARK: - Set Constraints

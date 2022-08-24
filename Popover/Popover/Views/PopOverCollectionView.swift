@@ -24,7 +24,7 @@ class PopOverCollectionView: UICollectionView {
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: .zero, collectionViewLayout: flowLayout)
-        
+        configure()
     }
     
     required init?(coder: NSCoder) {

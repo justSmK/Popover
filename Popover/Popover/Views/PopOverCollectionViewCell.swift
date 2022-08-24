@@ -56,7 +56,7 @@ class PopOverCollectionViewCell: UICollectionViewCell {
 extension PopOverCollectionViewCell {
     private func setConstraints() {
         NSLayoutConstraint.activate([
-            logoImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            logoImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
             logoImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             logoImageView.heightAnchor.constraint(equalToConstant: 20),
             logoImageView.widthAnchor.constraint(equalToConstant: 20),
