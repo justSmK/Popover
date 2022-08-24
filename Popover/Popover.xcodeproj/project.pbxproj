@@ -12,6 +12,9 @@
 		BB9C83A828B675E600BECD74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9C83A728B675E600BECD74 /* ViewController.swift */; };
 		BB9C83AD28B675E700BECD74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB9C83AC28B675E700BECD74 /* Assets.xcassets */; };
 		BB9C83B028B675E700BECD74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB9C83AE28B675E700BECD74 /* LaunchScreen.storyboard */; };
+		BB9C83B828B69AA800BECD74 /* PopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9C83B728B69AA800BECD74 /* PopOverViewController.swift */; };
+		BB9C83BC28B69B2200BECD74 /* PopOverCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9C83BB28B69B2200BECD74 /* PopOverCollectionView.swift */; };
+		BB9C83C028B69C7800BECD74 /* PopOverCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9C83BF28B69C7800BECD74 /* PopOverCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		BB9C83AC28B675E700BECD74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB9C83AF28B675E700BECD74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB9C83B128B675E700BECD74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB9C83B728B69AA800BECD74 /* PopOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopOverViewController.swift; sourceTree = "<group>"; };
+		BB9C83BB28B69B2200BECD74 /* PopOverCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopOverCollectionView.swift; sourceTree = "<group>"; };
+		BB9C83BF28B69C7800BECD74 /* PopOverCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopOverCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,33 @@
 		BB9C83A228B675E600BECD74 /* Popover */ = {
 			isa = PBXGroup;
 			children = (
+				BB9C83BA28B69AFC00BECD74 /* Controllers */,
+				BB9C83B928B69AEE00BECD74 /* Views */,
 				BB9C83A328B675E600BECD74 /* AppDelegate.swift */,
 				BB9C83A528B675E600BECD74 /* SceneDelegate.swift */,
-				BB9C83A728B675E600BECD74 /* ViewController.swift */,
 				BB9C83AC28B675E700BECD74 /* Assets.xcassets */,
 				BB9C83AE28B675E700BECD74 /* LaunchScreen.storyboard */,
 				BB9C83B128B675E700BECD74 /* Info.plist */,
 			);
 			path = Popover;
+			sourceTree = "<group>";
+		};
+		BB9C83B928B69AEE00BECD74 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BB9C83BB28B69B2200BECD74 /* PopOverCollectionView.swift */,
+				BB9C83BF28B69C7800BECD74 /* PopOverCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BB9C83BA28B69AFC00BECD74 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BB9C83A728B675E600BECD74 /* ViewController.swift */,
+				BB9C83B728B69AA800BECD74 /* PopOverViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,8 +159,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB9C83B828B69AA800BECD74 /* PopOverViewController.swift in Sources */,
 				BB9C83A828B675E600BECD74 /* ViewController.swift in Sources */,
+				BB9C83C028B69C7800BECD74 /* PopOverCollectionViewCell.swift in Sources */,
 				BB9C83A428B675E600BECD74 /* AppDelegate.swift in Sources */,
+				BB9C83BC28B69B2200BECD74 /* PopOverCollectionView.swift in Sources */,
 				BB9C83A628B675E600BECD74 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
